@@ -33,7 +33,7 @@ print(r)
 s = torch.tensor([[2,1,4,3],[1,2,3,4],[4,3,2,1]])
 print(s)
 '''
-
+'''
 # operations
 # elementwise operations
 # operators can be lifted to elementwise operators
@@ -109,6 +109,42 @@ X += Y
 print(id(X) == before)
 
 # conversion to other python objects
+# can change a NumPy tensor to a torch tensor
+# keeping the same memory location
+# using in-place operations
+A = X.numpy()
+B = torch.from_numpy(A)
+print(type(A), type(B))
+
+# convert tensor to scalar
+a = torch.tensor([3.5])
+print(a, a.item(), float(a), int(a))
+
+print(X < Y)
+
+a = torch.arange(1, 6, dtype=torch.float32).reshape((5,1))
+b = torch.arange(1, 3).reshape((1, 2))
+print(a, b)
+print(a + b)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
